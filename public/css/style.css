@@ -1,0 +1,304 @@
+.dark #about,
+.dark #blog,
+.dark #home,
+.dark #projects {
+    background-color: #18181b
+}
+
+.dark #blog .bg-gray-800 {
+    background-color: #23233a !important
+}
+
+.dark #blog .text-white,
+.dark .text-gray-800,
+.dark .text-gray-900 {
+    color: #f9fafb !important
+}
+
+.dark #blog .text-gray-400,
+.dark .text-gray-400,
+.dark .text-gray-600 {
+    color: #d1d5db !important
+}
+
+.dark #blog .text-indigo-400 {
+    color: #a855f7 !important
+}
+
+.dark body {
+    background-color: #111827;
+    color: #f9fafb
+}
+
+.dark header {
+    background-color: #1a1a2e99;
+    border-color: #22223b
+}
+
+.dark .project-card {
+    background-color: #23233a;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .4)
+}
+
+.dark .bg-gray-50,
+.dark .bg-white {
+    background-color: #18181b !important
+}
+
+.dark .border-gray-200,
+.dark .border-gray-300 {
+    border-color: #22223b !important
+}
+
+.dark .bg-gradient-to-r {
+    background-image: linear-gradient(to right, #23233a, #4f46e5)
+}
+
+.dark .bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, #23233a, #a855f7)
+}
+
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #a855f7;
+    --dark-bg: #111827;
+    --light-bg: #f9fafb;
+    --gradient-start: #ffffff;
+    --gradient-end: #f0f2f5
+}
+
+body {
+    font-family: Inter, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--light-bg)
+}
+
+#about,
+#projects {
+    background-color: var(--dark-bg)
+}
+
+#contact,
+#experience,
+#featured-project,
+footer {
+    background-color: transparent
+}
+
+.nav-active {
+    color: var(--primary-color);
+    font-weight: 600
+}
+
+.animate-header {
+    animation: .8s ease-out .5s both slide-down-fade
+}
+
+#home {
+    background-color: #fff;
+    background-image: radial-gradient(circle at top left, var(--gradient-end), var(--gradient-start) 70%)
+}
+
+.dark #home {
+    background-image: radial-gradient(circle at top left, #23233a 60%, #18181b 100%)
+}
+
+.hero-gradient-button {
+    background-size: 200% 100%
+}
+
+.hero-gradient-button:hover {
+    background-position: right center
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, .4)
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(79, 70, 229, 0)
+    }
+}
+
+.animate-pulse-profile {
+    animation: 2s infinite pulse
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+    transition: transform .3s ease-in-out
+}
+
+@keyframes slide-down-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes hero-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.animate-fade-in {
+    animation: 1s cubic-bezier(.4, 0, .2, 1) both hero-fade-in-up
+}
+
+.delay-200 {
+    animation-delay: .2s
+}
+
+.delay-300 {
+    animation-delay: .3s
+}
+
+.delay-400 {
+    animation-delay: .4s
+}
+
+.delay-500 {
+    animation-delay: .5s
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s ease-out, transform .6s ease-out
+}
+
+.fade-in-section.is-visible,
+.project-card.is-visible,
+section.is-visible {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+#experience .relative .absolute div {
+    transition: transform .3s
+}
+
+#experience .relative:hover .absolute div {
+    transform: scale(1.2)
+}
+
+.hero-gradient-button,
+.inline-block,
+a {
+    transition: color .3s, background .3s, box-shadow .3s, transform .3s
+}
+
+.hero-gradient-button:hover,
+.inline-block:hover,
+a:hover {
+    box-shadow: 0 4px 20px rgba(79, 70, 229, .15);
+    transform: translateY(-2px) scale(1.03)
+}
+
+.project-card,
+section {
+    transition: opacity .7s cubic-bezier(.4, 0, .2, 1), transform .7s cubic-bezier(.4, 0, .2, 1)
+}
+
+#about,
+#contact,
+#experience,
+#home,
+#projects {
+    transition: background .7s cubic-bezier(.4, 0, .2, 1)
+}
+
+@media (max-width:1024px) {
+    .lg\:flex {
+        flex-direction: column !important;
+        align-items: stretch !important
+    }
+
+    .lg\:items-center {
+        align-items: stretch !important
+    }
+
+    .lg\:space-x-12 {
+        gap: 2rem !important
+    }
+
+    .lg\:w-1\/2 {
+        width: 100% !important
+    }
+
+    .lg\:mt-0 {
+        margin-top: 2rem !important
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important
+    }
+
+    .sm\:text-4xl,
+    .text-4xl {
+        font-size: 2rem !important
+    }
+
+    .sm\:text-3xl,
+    .text-3xl {
+        font-size: 1.5rem !important
+    }
+
+    .project-card {
+        min-width: 0;
+        width: 100%
+    }
+
+    .grid-cols-3,
+    .sm\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important
+    }
+}
+
+@media (max-width:480px) {
+
+    .sm\:text-4xl,
+    .text-4xl {
+        font-size: 1.25rem !important
+    }
+
+    .sm\:text-3xl,
+    .text-3xl {
+        font-size: 1rem !important
+    }
+
+    .hero-gradient-button,
+    .inline-block {
+        padding: .75rem 1.5rem !important;
+        font-size: 1rem !important
+    }
+
+    .project-card {
+        margin-bottom: 1.5rem
+    }
+}

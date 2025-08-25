@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khagendra Chhetri - Aspiring Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Linked to your external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-200 animate-header">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-indigo-600">Portfolio</a>
+                </div>
+                <div class="flex items-center">
+                    <nav class="ml-10 flex items-baseline space-x-4 hidden md:flex">
+                        <a href="#home" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#projects" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#contact" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </nav>
+                    <button id="theme-toggle" class="ml-4 p-2 rounded-md text-gray-500 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 flex items-center justify-center" aria-label="Toggle dark mode">
+                        <span id="theme-icon">
+                            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+                            </svg>
+                            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1v2m0 18v2m9-9h-2M5 12H3m15.36 6.36l-1.42-1.42M6.36 6.36L4.94 4.94m12.02 0l-1.42 1.42M6.36 17.64l-1.42 1.42" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="md:hidden flex items-center mt-4 md:mt-0">
+                        <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                            <span class="sr-only">Open main menu</span>
+                            <svg id="menu-icon-open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                            <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-b border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#experience" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col justify-center pt-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center flex-grow flex flex-col justify-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight animate-fade-in">
+                        Hello, I'm <span class="text-indigo-600">Khagendra Chhetri</span>
+                    </h1>
+                    <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-600 animate-fade-in delay-200">
+                        A passionate <span class="font-semibold text-indigo-500">Aspiring Software Engineer</span> who loves building innovative solutions and creating exceptional user experiences.
+                    </p>
+                    <div class="mt-10 flex justify-center items-center flex-col sm:flex-row gap-4 animate-fade-in delay-300">
+                        <div class="relative group w-full sm:w-auto">
+                            <button id="resume-action-btn" class="hero-gradient-button inline-flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-3 px-8 rounded-lg w-full sm:w-auto focus:outline-none">
+                                <i data-lucide="file-text" class="w-5 h-5 mr-2"></i>
+                                View Resume
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div id="resume-dropdown" class="absolute left-0 top-full mt-2 w-full sm:w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 pointer-events-none group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200 z-20">
+                                <a href="assets/documents/resume.pdf" target="_blank" class="block px-6 py-3 text-indigo-600 font-semibold hover:bg-indigo-50 rounded-t-lg">View Resume PDF</a>
+                                <a href="assets/documents/resume.pdf" download class="block px-6 py-3 text-indigo-600 font-semibold hover:bg-indigo-50 rounded-b-lg">Download Resume</a>
+                            </div>
+                        </div>
+                        <a href="#projects" class="inline-block bg-white text-gray-800 font-bold py-3 px-8 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors duration-300 w-full sm:w-auto">
+                            View Projects
+                        </a>
+                    </div>
+                     <div class="mt-12 flex justify-center space-x-6 animate-fade-in delay-400">
+                        <a href="https://github.com/KhagendraChhetri" target="_blank" rel="noopener" class="text-gray-500 hover:text-indigo-600 transition-colors duration-300">
+                            <i data-lucide="github" class="w-7 h-7"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/khagendra-chhetri/" target="_blank" rel="noopener" class="text-gray-500 hover:text-indigo-600 transition-colors duration-300">
+                            <i data-lucide="linkedin" class="w-7 h-7"></i>
+                        </a>
+                        <a href="mailto:chhetrikhagendra96@gmail.com" class="text-gray-500 hover:text-indigo-600 transition-colors duration-300">
+                            <i data-lucide="mail" class="w-7 h-7"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+             <!-- Profile Image Div -->
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center pb-8">
+                <div class="inline-block bg-gradient-to-br from-indigo-200 to-purple-200 rounded-full p-1.5 shadow-lg animate-fade-in delay-500 animate-pulse-profile">
+                     <img src="assets/profile.jpg" alt="Khagendra Chhetri" class="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto object-cover border-4 border-white">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 sm:py-32 fade-in-section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:flex lg:items-start lg:space-x-12">
+                    <!-- About Me Column -->
+                    <div class="lg:w-1/2">
+                        <div class="mb-12">
+                            <h2 class="text-3xl sm:text-4xl font-bold text-white">About Me</h2>
+                            <div class="w-24 h-1 bg-indigo-500 mt-4"></div>
+                        </div>
+                        <p class="text-lg text-gray-300 mb-4">
+                            Hello, I'm Khagendra Chhetri. I'm a developer who thrives on turning complex challenges into elegant, functional software. I recently graduated with an upper second-class honours degree in Software Engineering from the University of Northampton.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-6">
+                            My toolkit is versatile, with a primary focus on full-stack JavaScript development using Next.js, React, TypeScript, and Node.js. I also possess strong back-end skills in Java and PHP (Laravel), experience with mobile development using Kotlin and Android, and an understanding of modern deployment with Docker.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-4">
+                        Based in the Northampton area, I am actively looking for a software engineer position where I can contribute my skills and grow within a dynamic team.
+                        </p>
+                    </div>
+                    <!-- Skills Column -->
+                    <div id="skills" class="lg:w-1/2 mt-10 lg:mt-0">
+                        <div class="mb-12">
+                            <h3 class="text-3xl sm:text-4xl font-bold text-white">Technologies I Use</h3>
+                            <div class="w-24 h-1 bg-indigo-500 mt-4"></div>
+                        </div>
+                        <div class="grid grid-cols-3 sm:grid-cols-4 gap-6">
+                            <!-- Next.js -->
+                            <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Next.js</p>
+                            </a>
+                             <!-- React -->
+                            <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">React</p>
+                            </a>
+                            <!-- TypeScript -->
+                            <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">TypeScript</p>
+                            </a>
+                            <!-- Node.js -->
+                            <a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Node.js</p>
+                            </a>
+                            <!-- HTML5 -->
+                            <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">HTML5</p>
+                            </a>
+                            <!-- CSS3 -->
+                            <a href="https://www.w3schools.com/css/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">CSS3</p>
+                            </a>
+                            <!-- JavaScript -->
+                            <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">JavaScript</p>
+                            </a>
+                            <!-- Java -->
+                            <a href="https://www.java.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Java</p>
+                            </a>
+                            <!-- Kotlin -->
+                            <a href="https://kotlinlang.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Kotlin</p>
+                            </a>
+                            <!-- Android -->
+                            <a href="https://www.android.com/intl/en_in/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/android-original-wordmark.svg" alt="Android" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Android</p>
+                            </a>
+                            <!-- PHP -->
+                             <a href="https://www.php.net/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/php-original.svg" alt="PHP" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">PHP</p>
+                            </a>
+                            <!-- Laravel -->
+                            <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/laravel-plain-wordmark.svg" alt="Laravel" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Laravel</p>
+                            </a>
+                             <!-- MySQL -->
+                            <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">MySQL</p>
+                            </a>
+                            <!-- Oracle -->
+                            <a href="https://www.oracle.com/in/index.html" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/oracle-original.svg" alt="Oracle" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Oracle</p>
+                            </a>
+                            <!-- Docker -->
+                            <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Docker</p>
+                            </a>
+                            <!-- Linux -->
+                            <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center space-y-2 group">
+                                <img src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" class="w-12 h-12" />
+                                <p class="text-sm text-gray-300 group-hover:text-white transition-colors">Linux</p>
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="py-20 sm:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Experience & Education</h2>
+                    <p class="mt-4 text-lg text-gray-600">My professional journey and educational background.</p>
+                    <div class="w-24 h-1 bg-indigo-500 mx-auto mt-4"></div>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative border-l-2 border-gray-200">
+                        <!-- Experience Item -->
+                        <div class="mb-12 relative">
+                            <div class="absolute -left-4 top-1 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md">
+                                <i data-lucide="briefcase" class="w-5 h-5"></i>
+                            </div>
+                            <div class="ml-10">
+                                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h3 class="text-xl font-bold text-gray-900">Software Engineer Intern</h3>
+                                        <p class="text-sm text-gray-500 flex items-center"><i data-lucide="calendar" class="inline-block w-4 h-4 mr-1"></i>Jan 2025 - Jan 2025 · 1 mo</p>
+                                    </div>
+                                    <p class="text-indigo-600 font-semibold mb-3">Skyscanner · United Kingdom · Remote</p>
+                                    <p class="text-gray-600 mb-4">As a Virtual Software Development Intern at Skyscanner, I gained hands-on experience in designing and enhancing web applications within an agile environment. My main focus was developing responsive, user-friendly interfaces using React and JavaScript, ensuring they met Skyscanner’s high standards for user experience.<br>
+                                    Developed responsive web applications using React and JavaScript, integrated Java backend services for real-time functionality, and contributed to Skyscanner’s library services project. Utilized Backpack design library for UI consistency, implemented automated testing, and enhanced workflows with external APIs and third-party libraries.</p>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                        <li>React</li>
+                                        <li>JavaScript</li>
+                                        <li>Java</li>
+                                        <li>Node.js</li>
+                                        <li>Library Services</li>
+                                        <li>Automated Testing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Item -->
+                        <div class="relative">
+                             <div class="absolute -left-4 top-1 bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            </div>
+                            <div class="ml-10">
+                                <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h3 class="text-xl font-bold text-gray-900">BSc Computing (Software Engineering) (Hons)</h3>
+                                        <p class="text-sm text-gray-500 flex items-center"><i data-lucide="calendar" class="inline-block w-4 h-4 mr-1"></i>2021 - 2024</p>
+                                    </div>
+                                    <p class="text-indigo-600 font-semibold mb-3">University of Northampton</p>
+                                    <p class="text-gray-600 mb-4">This degree provided a comprehensive foundation in the software development lifecycle, focusing on practical application and modern methodologies.</p>
+                                     <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                        <li>Upper Second Class,(2:1) Honours</li>
+                                        <li>Dean's List all semesters</li>
+                                        <li>President of the Coding Club</li>
+                                        <li class="mt-4 font-semibold text-indigo-600">First Year Modules:</li>
+                                        <ul class="list-disc ml-6 text-gray-600 space-y-1">
+                                            <li>COMPUTER SYSTEMS</li>
+                                            <li>COMPUTER COMMUNICATIONS</li>
+                                            <li>WEB DEVELOPMENT</li>
+                                            <li>SOFTWARE ENGINEERING 1</li>
+                                            <li>PROBLEM SOLVING AND PROGRAMMING</li>
+                                            <li>DATABASES 1</li>
+                                        </ul>
+                                        <li class="mt-4 font-semibold text-purple-600">Second Year Modules:</li>
+                                        <ul class="list-disc ml-6 text-gray-600 space-y-1">
+                                            <li>SOFTWARE ENGINEERING 2</li>
+                                            <li>GROUP PROJECT</li>
+                                            <li>SYSTEMS DESIGN AND DEVELOPMENT</li>
+                                            <li>DATABASES 2</li>
+                                            <li>MOBILE APPLICATION DEVELOPMENT 1</li>
+                                            <li>WEB PROGRAMMING</li>
+                                        </ul>
+                                        <li class="mt-4 font-semibold text-pink-600">Third Year Modules:</li>
+                                        <ul class="list-disc ml-6 text-gray-600 space-y-1">
+                                            <li>MEDIA TECHNOLOGY</li>
+                                            <li>SOFTWARE ENGINEERING 3</li>
+                                            <li>DATABASES 3</li>
+                                            <li>ARTIFICIAL INTELLIGENCE TECHNIQUES</li>
+                                            <li>COMPUTING DISSERTATION</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Project Section -->
+        <section id="featured-project" class="py-20 sm:py-32 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Featured Project</h2>
+                    <div class="w-24 h-1 bg-indigo-500 mx-auto mt-4"></div>
+                </div>
+                <div class="bg-white rounded-lg shadow-2xl overflow-hidden lg:flex">
+                    <div class="lg:w-1/2 flex flex-col items-center justify-center bg-gradient-to-br from-indigo-400 via-purple-400 to-yellow-300 p-2 rounded-2xl shadow-xl">
+                        <img src="assets/Tripify.jpg" alt="Tripify" class="w-64 h-64 object-cover rounded-xl border-4 border-white shadow-lg">
+                        <span class="mt-4 text-xl font-bold bg-gradient-to-r from-indigo-700 via-purple-500 to-yellow-400 bg-clip-text text-transparent drop-shadow dark:from-yellow-300 dark:via-purple-300 dark:to-indigo-400">
+    Tripify
+</span>
+                    </div>
+                    <div class="p-8 lg:p-12 lg:w-1/2 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Andriod App Development</h3>
+                        <p class="text-gray-600 mb-6">
+                            An intuitive travel companion for discovering destinations and planning itineraries. Developed as a native Android application in Java using Android Studio, and powered by Firebase for real-time location data, user reviews, and personalized trip management.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Android Studio</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Firebase</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Java</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Live Currency Exchange API</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="https://youtu.be/wUZLJPn7p7Q" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition">
+                                Live Demo <i data-lucide="external-link" class="ml-2 w-5 h-5"></i>
+                            </a>
+                            <a href="https://github.com/KhagendraChhetri/App-Development" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 hover:bg-gray-100 transition">
+                                View Code <i data-lucide="github" class="ml-2 w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 sm:py-32 fade-in-section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">More Projects</h2>
+                    <p class="mt-4 text-lg text-gray-400">A selection of my work. Check them out!</p>
+                    <div class="w-24 h-1 bg-indigo-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg group blog-card-interactive">
+                        <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Whac-A-Mole" alt="Whac-A-Mole" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Android App Development </h3>
+                            <div class="blog-summary">
+                                <p class="text-gray-400 mb-4">A full-featured gaming app built with Kotlin and Android Studio</p>
+                                <p class="text-gray-300 mb-4 text-base">
+                                  This project is a mobile version of the classic "Whac-A-Mole" arcade game, developed natively for Android using Kotlin and Android Studio. The app tests players' speed and reflexes as they tap on moles that pop up randomly from a grid of holes, all while racing against a countdown timer.
+                                </p>
+                            </div>
+                            <div class="blog-full-content hidden">
+                                <p class="text-gray-300 mb-4 text-base">
+                                  This project was a practical application of core Android development concepts, including:<br><br>
+                                  <strong>UI/UX:</strong> Designing a clean, responsive, and engaging game interface using XML layouts.<br>
+                                  <strong>Game Logic:</strong> Implementing the core gameplay loop, including random mole appearances, score tracking, and a timer.<br>
+                                  <strong>Event Handling:</strong> Managing user touch input to register successful "whacks."<br>
+                                  <strong>Kotlin Proficiency:</strong> Leveraging Kotlin's concise syntax and null safety features to write clean, efficient, and robust code.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">Kotlin</span>
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">Android Studio</span>
+                                <button class="read-more-interactive text-indigo-400 hover:text-indigo-200 font-semibold ml-2">Read More</button>
+                                <button class="read-less-interactive text-indigo-400 hover:text-indigo-200 font-semibold ml-2 hidden">Read Less</button>
+                            </div>
+                            <div class="flex justify-end space-x-4">
+                                <a href="https://github.com/KhagendraChhetri/WhacAMole" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" title="View Code" target="_blank" rel="noopener noreferrer">
+                                    <i data-lucide="github" class="w-6 h-6 pointer-events-auto"></i>
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.khagendra.whacamole" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" title="Live Demo" target="_blank" rel="noopener noreferrer">
+                                    <i data-lucide="external-link" class="w-6 h-6 pointer-events-auto"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg group blog-card-interactive">
+                        <img src="https://placehold.co/600x400/4f46e5/ffffff?text=NightCheckIn App" alt="NightCheckIn App" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">NightCheckIn - Employee Time Tracking System</h3>
+                            <div class="blog-summary">
+                                <p class="text-gray-400 mb-4">A responsive chat application using Node.js and Firebase for real-time tracking and authentication.</p>
+                                <p class="text-gray-300 mb-4 text-base">
+                                  NightCheckIn is a real-time, full-stack application designed to help businesses accurately track employee work hours. Built with a modern JavaScript stack, it provides a simple and efficient solution for employees to clock in and out, and for managers to monitor attendance and generate reports.
+                                </p>
+                            </div>
+                            <div class="blog-full-content hidden">
+                                <p class="text-gray-300 mb-4 text-base">
+                                  The backend is powered by Node.js, providing a robust and scalable API, while Firebase is used for real-time data storage and user authentication. This ensures that clock-in data is captured and updated instantly across the application. This project demonstrates proficiency in building full-stack JavaScript applications, working with NoSQL databases, and implementing secure user authentication.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">Node.js</span>
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">Firebase</span>
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">HTML</span>
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">CSS</span>
+                                <button class="read-more-interactive text-indigo-400 hover:text-indigo-200 font-semibold ml-2">Read More</button>
+                                <button class="read-less-interactive text-indigo-400 hover:text-indigo-200 font-semibold ml-2 hidden">Read Less</button>
+                            </div>
+                            <div class="flex justify-end space-x-4">
+                                <a href="https://github.com/KhagendraChhetri/NightCheckIn" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" title="View Code" target="_blank" rel="noopener">
+                                    <i data-lucide="github" class="w-6 h-6"></i>
+                                </a>
+                                <a href="https://nightcheckin.web.app/" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" title="Live Demo" target="_blank" rel="noopener">
+                                    <i data-lucide="external-link" class="w-6 h-6"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg group blog-card-interactive">
+                        <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Portfolio" alt="Portfolio" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Personal Blog</h3>
+                            <div class="blog-summary">
+                                <p class="text-gray-400 mb-4">A static-generated blog with markdown support, built with Node.js and others.</p>
+                                <p class="text-gray-300 mb-4 text-base">
+                                  This project is the very website you are currently viewing—a custom-built, fully responsive personal portfolio designed to showcase my skills, projects, and professional background. It was developed from scratch to create a clean, fast, and user-friendly online presence.
+                                </p>
+                            </div>
+                            <div class="blog-full-content hidden">
+                                <p class="text-gray-300 mb-4 text-base">
+                                  The front-end was crafted using HTML, CSS, and vanilla JavaScript, with a primary focus on modern, responsive design principles to ensure a seamless experience on any device. The backend is powered by a lightweight Node.js server responsible for efficiently serving the site's content. This project demonstrates a strong foundation in core web development technologies and the ability to build a polished, professional web application from the ground up.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">Node.js</span>
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">HTML</span>
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">HTML</span>
+                                <span class="text-xs font-semibold bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded-full">Javascript</span>
+                                <button class="read-more-interactive text-indigo-400 hover:text-indigo-200 font-semibold ml-2">Read More</button>
+                                <button class="read-less-interactive text-indigo-400 hover:text-indigo-200 font-semibold ml-2 hidden">Read Less</button>
+                            </div>
+                            <div class="flex justify-end space-x-4">
+                                <a href="#" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" title="View Code">
+                                    <i data-lucide="github" class="w-6 h-6"></i>
+                                </a>
+                                <a href="#" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" title="Live Demo">
+                                    <i data-lucide="external-link" class="w-6 h-6"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog/Articles Section -->
+        <section id="blog" class="py-20 sm:py-32 fade-in-section bg-white dark:bg-[#18181b]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Blog & Articles</h2>
+                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Sharing my thoughts, tutorials, and industry insights.</p>
+                    <div class="w-24 h-1 bg-indigo-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Example Article Card with interactive tilt and ripple -->
+                    <div class="blog-card-interactive bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg group border border-gray-200 dark:border-gray-700 transition-transform duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-105 animate-fade-in animate__animated animate__fadeInUp animate__faster">
+    <div class="p-6 flex flex-col">
+        <h3 class="text-xl font-bold mb-2 text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 dark:from-indigo-400 dark:via-purple-700 dark:to-indigo-400 px-3 py-2 rounded shadow-lg">Crafting a Standout Portfolio: Best Practices for Developers</h3>
+        <div class="blog-summary text-gray-700 dark:text-gray-300 mb-4 text-base leading-relaxed">
+            In today’s competitive tech landscape, a strong portfolio is more than just a resume—it's a dynamic showcase of your skills, a testament to your problem-solving abilities, and a window into your passion for development. It’s often the first impression you make on a potential employer or client, and a well-crafted one can be the key that unlocks incredible opportunities.
+        </div>
+        <div class="blog-full-content hidden text-gray-700 dark:text-gray-300 mb-4 text-base leading-relaxed">
+            So, how do you create a professional, responsive portfolio that impresses recruiters and clients alike? Let's dive into some modern design principles, accessibility considerations, and the latest web technologies to help you showcase your skills effectively.<br><br>
+            <strong>1. Curate Your Projects: Quality Over Quantity</strong><br>
+            The core of your portfolio is your work. It's tempting to include every project you've ever touched, but a curated selection is far more powerful.<br>
+            <ul class="list-disc ml-6">
+                <li><strong>Showcase Your Best Work:</strong> Choose 3-5 of your most impressive projects. Select ones that are complex, solve a real-world problem, or demonstrate a specific, high-demand skill.</li>
+                <li><strong>Tell a Story for Each Project:</strong> Use the STAR (Situation, Task, Action, Result) method to describe each project. Explain the problem you were solving, your specific role, the technologies you used and why you chose them, and the final outcome. Link to the live demo and the GitHub repository.</li>
+                <li><strong>Demonstrate Variety:</strong> If you can, show a range of skills. Include a full-stack application, a slick front-end project, a mobile app, or a contribution to an open-source project.</li>
+            </ul><br>
+            <strong>2. Design with the User in Mind: Clean, Modern, and Accessible</strong><br>
+            Your portfolio's design speaks volumes about your attention to detail.<br>
+            <ul class="list-disc ml-6">
+                <li><strong>Embrace Simplicity:</strong> A clean, minimalist design keeps the focus on your projects. Use a consistent color scheme, legible fonts, and plenty of white space to create a professional and uncluttered feel.</li>
+                <li><strong>Mobile-First is Non-Negotiable:</strong> The majority of recruiters will view your portfolio on various devices. A responsive design that looks great on desktops, tablets, and smartphones is essential.</li>
+                <li><strong>Prioritize Accessibility (a11y):</strong> An accessible portfolio is not just a best practice; it shows you're a thoughtful and inclusive developer. Ensure your site has proper color contrast, semantic HTML, and alt text for all images.</li>
+            </ul><br>
+            <strong>3. Write Compelling Content</strong><br>
+            Your words are just as important as your code.<br>
+            <ul class="list-disc ml-6">
+                <li><strong>Clear "About Me" Section:</strong> This is your chance to show your personality. Briefly tell your story, share your passion for technology, and mention what you're looking for in your next role.</li>
+                <li><strong>Easy-to-Find Contact Information:</strong> Make it effortless for people to reach you. Include links to your GitHub, LinkedIn, and a professional email address or a simple contact form.</li>
+            </ul><br>
+            <strong>4. Leverage Modern Technologies</strong><br>
+            The tools you use to build your portfolio are, in themselves, a demonstration of your skills.<br>
+            <ul class="list-disc ml-6">
+                <li><strong>Choose a Modern Stack:</strong> Building your portfolio with a modern framework like React, Vue, or Svelte can be a great learning experience and a talking point in interviews.</li>
+                <li><strong>Static Site Generators:</strong> Tools like Next.js, Gatsby, or Astro can help you build a blazing-fast, SEO-friendly site that’s easy to deploy.</li>
+                <li><strong>Deployment:</strong> Host your site on platforms like Vercel, Netlify, or GitHub Pages for seamless, continuous deployment directly from your Git repository.</li>
+            </ul><br>
+            By focusing on these key areas, you can build a portfolio that not only showcases your technical abilities but also tells a compelling story about who you are as a developer.
+        </div>
+        <div class="flex gap-2 flex-wrap">
+            <button class="read-more-interactive text-indigo-600 dark:text-indigo-400 hover:text-indigo-400 font-semibold relative overflow-hidden inline-block transition-all duration-300 px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-indigo-200 dark:border-purple-400 shadow-sm">
+                <span class="relative z-10">Read More →</span>
+                <span class="ripple-effect absolute left-0 top-0 w-full h-full"></span>
+            </button>
+            <button class="read-less-interactive hidden text-indigo-600 dark:text-indigo-400 hover:text-indigo-400 font-semibold relative overflow-hidden inline-block transition-all duration-300 px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-indigo-200 dark:border-purple-400 shadow-sm">
+                <span class="relative z-10">Read Less ←</span>
+                <span class="ripple-effect absolute left-0 top-0 w-full h-full"></span>
+            </button>
+        </div>
+    </div>
+</div>
+                    <!-- Article 2 -->
+                    <div class="blog-card-interactive bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg group border border-gray-200 dark:border-gray-700 transition-transform duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-105 animate-fade-in animate__animated animate__fadeInUp animate__fast">
+    <div class="p-6 flex flex-col">
+        <h3 class="text-xl font-bold mb-2 text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 dark:from-indigo-400 dark:via-purple-700 dark:to-indigo-400 px-3 py-2 rounded shadow-lg">Mastering JavaScript Closures for Clean, Efficient Code</h3>
+        <div class="blog-summary text-gray-700 dark:text-gray-300 mb-4 text-base leading-relaxed">
+            JavaScript is full of powerful concepts that, once mastered, can dramatically improve your code's quality and maintainability. One of the most fundamental, and often misunderstood, of these concepts is the closure. A deep dive into closures reveals how they enable elegant solutions for encapsulation, modularity, and managing state.
+        </div>
+        <div class="blog-full-content hidden text-gray-700 dark:text-gray-300 mb-4 text-base leading-relaxed">
+            <strong>What Exactly is a Closure?</strong><br>
+            In simple terms, a closure is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created.<br><br>
+            Essentially, a closure gives a function access to its outer function's scope, even after the outer function has returned. The inner function "remembers" the environment in which it was created.<br><br>
+            <strong>Classic Example:</strong>
+            <pre class="bg-gray-200 dark:bg-gray-900 rounded p-2 text-xs overflow-x-auto mb-2"><code>function createCounter() {
+  let count = 0; // 'count' is a local variable created by createCounter
+
+  return function() {
+    count += 1; // The inner function has access to 'count'
+    return count;
+  };
+}
+
+const counter = createCounter(); // createCounter() runs and returns the inner function
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+</code></pre>
+            <strong>How Does it Work?</strong><br>
+            In the example above, createCounter is a function factory. It creates and returns another function.<br>
+            When we call createCounter(), it initializes a local variable count to 0.<br>
+            It then returns the anonymous inner function.<br>
+            Crucially, even after createCounter() has finished executing, the inner function that we assigned to the counter variable still has access to the count variable. This is the closure in action.<br>
+            The inner function has "closed over" the count variable, creating a private, persistent state that only it can access and modify. Each time we call counter(), it increments the same count variable.<br><br>
+            <strong>Practical Use Cases for Closures</strong><br>
+            Closures aren't just an academic concept; they are used everywhere in modern JavaScript for practical purposes.<br>
+            <ul class="list-disc ml-6">
+                <li><strong>Data Encapsulation and Privacy:</strong> As seen in our counter example, closures are the primary way to create private variables in JavaScript. The count variable cannot be accessed from outside the counter function, which prevents accidental modification and makes your code more robust. This is a foundational concept for creating modules.</li>
+                <li><strong>Partial Application and Currying:</strong> Closures are perfect for creating specialized functions. You can have an outer function that takes some arguments and an inner function that takes the rest.<br>
+                <pre class="bg-gray-200 dark:bg-gray-900 rounded p-2 text-xs overflow-x-auto mb-2"><code>function multiply(a) {
+  return function(b) {
+    return a * b;
+  };
+}
+
+const double = multiply(2);
+const triple = multiply(3);
+
+console.log(double(5)); // 10
+console.log(triple(5)); // 15
+</code></pre>
+                </li>
+                <li><strong>Event Handlers and Callbacks:</strong> Closures are essential when working with asynchronous code, like event listeners in a loop, to capture the correct state.<br>
+                <pre class="bg-gray-200 dark:bg-gray-900 rounded p-2 text-xs overflow-x-auto mb-2"><code>for (var i = 1; i <= 3; i++) {
+  // Using an IIFE (Immediately Invoked Function Expression) to create a new scope
+  (function(num) {
+    setTimeout(function() {
+      console.log(num); // Logs 1, then 2, then 3
+    }, num * 1000);
+  })(i);
+}
+</code></pre>
+                Without the closure created by the IIFE, this loop would incorrectly log the number 4 three times.</li>
+            </ul><br>
+            By leveraging closures, you can write cleaner, more modular, and more maintainable JavaScript. They allow you to create private state, build powerful function factories, and handle asynchronous logic with ease. Understanding them is a key step in leveling up as a JavaScript developer.
+        </div>
+        <div class="flex gap-2 flex-wrap">
+            <button class="read-more-interactive text-indigo-600 dark:text-indigo-400 hover:text-indigo-400 font-semibold relative overflow-hidden inline-block transition-all duration-300 px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-indigo-200 dark:border-purple-400 shadow-sm">
+                <span class="relative z-10">Read More →</span>
+                <span class="ripple-effect absolute left-0 top-0 w-full h-full"></span>
+            </button>
+            <button class="read-less-interactive hidden text-indigo-600 dark:text-indigo-400 hover:text-indigo-400 font-semibold relative overflow-hidden inline-block transition-all duration-300 px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-indigo-200 dark:border-purple-400 shadow-sm">
+                <span class="relative z-10">Read Less ←</span>
+                <span class="ripple-effect absolute left-0 top-0 w-full h-full"></span>
+            </button>
+        </div>
+    </div>
+</div>
+                    <!-- Article 3 -->
+                    <div class="blog-card-interactive bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg group border border-gray-200 dark:border-gray-700 transition-transform duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-105 animate-fade-in animate__animated animate__fadeInUp">
+    <div class="p-6 flex flex-col">
+        <h3 class="text-xl font-bold mb-2 text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 dark:from-indigo-400 dark:via-purple-700 dark:to-indigo-400 px-3 py-2 rounded shadow-lg">Android Studio & Kotlin vs Java: The Future of Mobile Development</h3>
+        <div class="blog-summary text-gray-700 dark:text-gray-300 mb-4 text-base leading-relaxed">
+            The Android operating system powers billions of devices worldwide, making it an essential platform for any developer looking to make an impact. The official and most powerful tool for building these applications is Android Studio, a comprehensive IDE from Google. When you embark on a new Android project, your first major technical decision involves choosing a programming language: Java or Kotlin?
+        </div>
+        <div class="blog-full-content hidden text-gray-700 dark:text-gray-300 mb-4 text-base leading-relaxed">
+            <strong>Android Studio: The Command Center for Android Development</strong><br>
+            Think of Android Studio as your complete workshop for building apps. It's not just a place to write code; it's an entire ecosystem designed to make development efficient and effective. Key features include:
+            <ul class="list-disc ml-6">
+                <li><strong>Intelligent Code Editor:</strong> Advanced code completion, error analysis, and refactoring tools for both Java and Kotlin.</li>
+                <li><strong>Visual Layout Editor:</strong> Drag-and-drop UI design with previews for different screen sizes.</li>
+                <li><strong>Flexible Gradle Build System:</strong> Powerful customization for builds, dependencies, and app versions.</li>
+                <li><strong>High-Performance Emulator:</strong> Test and debug on a wide variety of virtual Android devices.</li>
+            </ul><br>
+            <strong>The Languages: A Tale of Two Titans</strong><br>
+            <strong>Java: The Battle-Tested Veteran</strong><br>
+            As the original language of Android, Java has an incredibly deep-rooted history. Its maturity is its greatest strength.<br>
+            <ul class="list-disc ml-6">
+                <li><strong>Strengths:</strong> Massive community support, countless tutorials, and refined open-source libraries. Essential for older apps.</li>
+                <li><strong>Drawbacks:</strong> Verbosity and boilerplate code can make files longer and more complex.</li>
+            </ul><br>
+            <strong>Kotlin: The Modern, Google-Endorsed Successor</strong><br>
+            In 2019, Google named Kotlin the official, preferred language for Android development. Kotlin is modern, concise, and runs on the JVM.<br>
+            <ul class="list-disc ml-6">
+                <li><strong>Drastically Reduced Boilerplate:</strong> Data classes, type inference, and extension functions mean cleaner, more readable code.</li>
+                <li><strong>Built-in Null Safety:</strong> Eliminates NullPointerException, making apps more stable.</li>
+                <li><strong>Seamless Java Interoperability:</strong> Use Java libraries and migrate code gradually.</li>
+            </ul><br>
+            <strong>Java vs Kotlin Example:</strong>
+            <pre class="bg-gray-200 dark:bg-gray-900 rounded p-2 text-xs overflow-x-auto mb-2"><code>Java:
+public class User {
+    private final String name;
+    private final int age;
+
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+    // Plus, you still need to implement equals(), hashCode(), and toString()...
+}
+
+Kotlin:
+data class User(val name: String, val age: Int)
+</code></pre>
+            <strong>The Verdict: Which Language Should You Choose?</strong><br>
+            For all new Android projects, start with Kotlin. The benefits in safety, conciseness, and developer productivity are too significant to ignore. It is the modern standard and the future of the platform.<br>
+            For existing Java projects, introduce Kotlin gradually. Use new features or tests in Kotlin, and migrate smaller files as you touch them.<br><br>
+            In conclusion, while Java laid the foundation for Android, Kotlin is the language that will carry it into the future. By mastering Android Studio and embracing Kotlin, you are positioning yourself at the forefront of modern mobile development.
+        </div>
+        <div class="flex gap-2 flex-wrap">
+            <button class="read-more-interactive text-indigo-600 dark:text-indigo-400 hover:text-indigo-400 font-semibold relative overflow-hidden inline-block transition-all duration-300 px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-indigo-200 dark:border-purple-400 shadow-sm">
+                <span class="relative z-10">Read More →</span>
+                <span class="ripple-effect absolute left-0 top-0 w-full h-full"></span>
+            </button>
+            <button class="read-less-interactive hidden text-indigo-600 dark:text-indigo-400 hover:text-indigo-400 font-semibold relative overflow-hidden inline-block transition-all duration-300 px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-indigo-200 dark:border-purple-400 shadow-sm">
+                <span class="relative z-10">Read Less ←</span>
+                <span class="ripple-effect absolute left-0 top-0 w-full h-full"></span>
+            </button>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 sm:py-32 fade-in-section">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-xl mx-auto bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 sm:p-12 transition-colors duration-300">
+              <h2 class="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-4 text-center">Contact Me</h2>
+              <p class="text-gray-600 dark:text-gray-300 mb-8 text-center">I'd love to hear from you! Fill out the form below and I'll get back to you soon.</p>
+              <form id="contact-form" action="https://formspree.io/f/xqalrnzq" method="POST" class="space-y-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 dark:text-indigo-300">Name</label>
+                  <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-lg sm:text-xl px-5 py-4 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 shadow-sm" placeholder="">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 dark:text-indigo-300">Email</label>
+                  <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-lg sm:text-xl px-5 py-4 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 shadow-sm" placeholder="">
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 dark:text-indigo-300">Message</label>
+                  <textarea name="message" id="message" rows="5" required class="mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 shadow-sm resize-none" placeholder="Type your message..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 transition-all duration-200">Send Message</button>
+                <div id="form-status" class="mt-4 text-center text-gray-500 dark:text-gray-400"></div>
+              </form>
+
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; <span id="current-year"></span> Khagendra Chhetri. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
